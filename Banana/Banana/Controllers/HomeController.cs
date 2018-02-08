@@ -15,16 +15,23 @@ namespace Banana.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Archive()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "archive & restore orders";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Sheets()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "create and edit export CSVs";
+
+            return View();
+        }
+
+        public IActionResult Tracking()
+        {
+            ViewData["Message"] = "update orders with tracking CSVs";
 
             return View();
         }
