@@ -23,7 +23,6 @@ namespace Banana
                 .UseStartup<Startup>()
                 .Build();
 
-      
 
 
     }
