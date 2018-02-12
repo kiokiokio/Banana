@@ -14,8 +14,8 @@ namespace Banana
         Uri BASE_URL = new Uri("https://openapi.etsy.com/v2");
 
         // Is this where I put this stuff?? Originally were just defined not set to any specific values...
-        string appKey;
-        string sharedSecret;
+        string appKey = string.Empty;
+        string sharedSecret = string.Empty;
         RestClient restClient;
 
         private string[] _permissions_array;
@@ -37,7 +37,7 @@ namespace Banana
 
             // dev suggested to move permissions to Web.config
             // pretty sure i need to update these permissions - looking for receipts not listings
-            _permissions_array = new string[] { "listings_r", "listings_w", "listings_d", "shops_rw" };
+            _permissions_array = new string[] { "listings_r", "listings_w", "listings_d", "transactions_r" };
         }
 
         public string GetListings()
@@ -57,8 +57,6 @@ namespace Banana
             return response.Content;
         }
 
-        /*
-         * 
         public string GetConfirmUrl(out string oauth_token, out string oauth_token_secret, string callbackUrl_ = null)
         {
             restClient.Authenticator = OAuth1Authenticator.ForRequestToken(appKey, sharedSecret, callbackUrl_ ?? "oob");
@@ -109,6 +107,5 @@ namespace Banana
             return irestResponse.Content;
         }
 
-        */
     }
 }
