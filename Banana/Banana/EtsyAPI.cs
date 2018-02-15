@@ -13,7 +13,6 @@ namespace Banana
 
         Uri BASE_URL = new Uri("https://openapi.etsy.com/v2");
 
-        // Is this where I put this stuff?? Originally were just defined not set to any specific values...
         string appKey;
         string sharedSecret;
         RestClient restClient;
